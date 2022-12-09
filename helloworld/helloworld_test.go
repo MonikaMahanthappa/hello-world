@@ -1,7 +1,8 @@
-package greeting
+package helloworld_test
 
 import (
 	"github.com/stretchr/testify/assert"
+	. "greeting/helloworld"
 	"testing"
 )
 
