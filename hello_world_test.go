@@ -1,10 +1,11 @@
 package greeting
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestHelloWorld(t *testing.T) {
 	expected := "Hello, World!"
-	if observed := HelloWorld(); observed != expected {
-		t.Fatalf("HelloWorld() = %v, want %v", observed, expected)
-	}
+	assert.Equal(t, expected, HelloWorld(), "they should be equal")
 }
