@@ -7,6 +7,8 @@ import (
 )
 
 func TestHelloWorld(t *testing.T) {
-	expected := "Hello, World!"
-	assert.Equal(t, expected, HelloWorld(), "they should be equal")
+	t.Run("should greet with Hello, World!", func(t *testing.T) {
+		expected := "Hello, World!"
+		assert.Equal(t, expected, HelloWorld())
+	})
 }
