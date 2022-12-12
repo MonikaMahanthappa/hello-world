@@ -25,4 +25,13 @@ func TestFizzBuzz(t *testing.T) {
 		})
 	})
 
+	t.Run("multiple of five", func(t *testing.T) {
+		t.Run("should be Buzz when number is 5", func(t *testing.T) {
+			assert.Equal(t, "Buzz", fizzbuzz.FizzBuzz(5))
+		})
+		t.Run("should be Buzz when number is 10", func(t *testing.T) {
+			assert.Equal(t, "Buzz", fizzbuzz.FizzBuzz(10))
+		})
+	})
+
 }
