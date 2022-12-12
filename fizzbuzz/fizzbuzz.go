@@ -5,6 +5,9 @@ import (
 )
 
 func FizzBuzz(number int) string {
+	if number%15 == 0 {
+		return "FizzBuzz"
+	}
 	if isMultipleOfThree(number) {
 		return "Fizz"
 	}
