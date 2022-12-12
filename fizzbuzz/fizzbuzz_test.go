@@ -15,12 +15,14 @@ func TestFizzBuzz(t *testing.T) {
 		assert.Equal(t, "4", fizzbuzz.FizzBuzz(4))
 	})
 
-	t.Run("should be Fizz when number is 3", func(t *testing.T) {
-		assert.Equal(t, "Fizz", fizzbuzz.FizzBuzz(3))
-	})
+	t.Run("multiple of three", func(t *testing.T) {
+		t.Run("should be Fizz when number is 3", func(t *testing.T) {
+			assert.Equal(t, "Fizz", fizzbuzz.FizzBuzz(3))
+		})
 
-	t.Run("should be Fizz when number is 6", func(t *testing.T) {
-		assert.Equal(t, "Fizz", fizzbuzz.FizzBuzz(6))
+		t.Run("should be Fizz when number is 6", func(t *testing.T) {
+			assert.Equal(t, "Fizz", fizzbuzz.FizzBuzz(6))
+		})
 	})
 
 }
